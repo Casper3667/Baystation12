@@ -330,3 +330,20 @@
 
 	var/new_skin = input(usr, "Choose your new skin colour: ", "Change Colour", rgb(r_skin, g_skin, b_skin)) as color|null
 	change_skin_color(hex2num(copytext(new_skin, 2, 4)), hex2num(copytext(new_skin, 4, 6)), hex2num(copytext(new_skin, 6, 8)))
+
+/mob/living/carbon/human/tajaran/verb/toggle_claws
+	set name = "toggle claws"
+	set category = "IC"
+
+	src.claws_out= !src.claws_out
+	if(T.claws_out)
+		to_chat(src, "<span class='notice'>You retract your claws.</span>")
+	else
+		to_chat(src, "<span class='notice'>You extend your claws.</span>")
+
+If (istype(M, /mob/living/carbon/human/tajaran))
+    var/mob/living/carbon/human/tajaran/T = M
+    if(T.claws_out)
+		unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
+	else
+		unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp)
