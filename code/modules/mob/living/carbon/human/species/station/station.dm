@@ -153,6 +153,7 @@
 	secondary_langs = list(LANGUAGE_SIIK_MAAS, LANGUAGE_SIIK_TAJR)
 	name_language = LANGUAGE_SIIK_MAAS
 	health_hud_intensity = 1.75
+	var/claws_out = 0
 
 	min_age = 17
 	max_age = 80
