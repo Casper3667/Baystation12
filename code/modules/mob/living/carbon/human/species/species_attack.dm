@@ -138,3 +138,10 @@
 	delay = 20
 	eye_attack_text = "a forelimb"
 	eye_attack_text_victim = "a forelimb"
+	
+/mob/living/carbon/human/proc/toggle_claws()
+	set name = "Toggle Claws"
+	set category = "Abilities"
+
+	src.claws_out= !src.claws_out
+	to_chat(src, "You [claws_out? "extend" : "retract"] your claws.")
