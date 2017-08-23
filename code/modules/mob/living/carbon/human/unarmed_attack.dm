@@ -135,6 +135,13 @@ var/global/list/sparring_attack_cache = list()
 	eye_attack_text_victim = "digits"
 	damage = 0
 
+/datum/unarmed_attack/punch/is_usable(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone)
+	if(istype(user, /mob/living/carbon/human/tajaran))
+		var/mob/living/carbon/human/tajaran/T = user 
+		if(T.claws_out)
+			return 0
+	..()
+
 /datum/unarmed_attack/punch/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	var/organ = affecting.name
