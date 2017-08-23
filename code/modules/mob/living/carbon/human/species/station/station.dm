@@ -153,6 +153,10 @@
 	secondary_langs = list(LANGUAGE_SIIK_MAAS, LANGUAGE_SIIK_TAJR)
 	name_language = LANGUAGE_SIIK_MAAS
 	health_hud_intensity = 1.75
+	
+	inherent_verbs = list(
+		/mob/living/carbon/human/proc/toggle_claws
+)
 
 	min_age = 17
 	max_age = 80
