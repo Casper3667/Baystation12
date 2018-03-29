@@ -27,6 +27,14 @@
 	autohiss_basic_map = list(
 			"r" = list("rr", "rrr", "rrrr")
 		)
+		autohiss_extra_map = list(
+			"him " = list("them")
+			"her " = list("them")
+			"his " = list("theirs")
+			"hers " = list("theirs")
+			"he " = list("they")
+			"she " = list("they")
+		)
 	autohiss_exempt = list(LANGUAGE_SIIK_MAAS)
 
 
