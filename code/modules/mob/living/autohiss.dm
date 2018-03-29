@@ -27,7 +27,7 @@
 	autohiss_basic_map = list(
 			"r" = list("rr", "rrr", "rrrr")
 		)
-		autohiss_extra_map = list(
+	autohiss_extra_map = list(
 			"him " = list("them")
 			"her " = list("them")
 			"his " = list("theirs")
