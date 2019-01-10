@@ -18,6 +18,7 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 	var/sendcooldown = 0 // to avoid spamming fax messages
 	var/department = "Unknown" // our department
 	var/destination = null // the department we're sending to
+	var/obj/fax_copy = null
 
 	var/static/list/admin_departments
 
@@ -173,7 +174,6 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 
 	if (sender == null || sender == "")
 		sender = "Remote Source"
-		var/fax_copy = null
 	if (istype(incoming, /obj/item/weapon/paper))
 		fax_copy = copy(incoming)
 		fax_copy.desc = "a faxed sheet of paper from [sender]"
