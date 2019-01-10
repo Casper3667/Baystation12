@@ -188,8 +188,6 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 
 	use_power_oneoff(active_power_usage)
 	return 1
-	
-/obj/machinery/photocopier/faxmachine/proc/copy(var/obj/item/weapon/paper/copy, var/need_toner=1)
 
 
 /obj/machinery/photocopier/faxmachine/proc/send_admin_fax(var/mob/sender, var/destination)
